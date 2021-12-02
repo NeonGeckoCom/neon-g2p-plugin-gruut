@@ -8,4 +8,4 @@ class GruutPlugin(Grapheme2PhonemePlugin):
         for sent in sentences(word, lang=lang):
             for word in sent:
                 if word.phonemes:
-                    return [p.replace('ˈ', "") for p in word.phonemes]
+                    return [p for p in word.phonemes]
