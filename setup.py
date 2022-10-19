@@ -3,6 +3,7 @@ from setuptools import setup
 
 
 PLUGIN_ENTRY_POINT = 'neon-g2p-gruut-plugin=neon_g2p_gruut_plugin:GruutPlugin'
+CONFIG_ENTRY_POINT = 'neon-g2p-gruut-plugin.config=neon_g2p_gruut_plugin:GruutG2PConfig'
 setup(
     name='neon-g2p-gruut-plugin',
     version='0.0.1',
@@ -14,5 +15,6 @@ setup(
     packages=['neon_g2p_gruut_plugin'],
     zip_safe=True,
     keywords='mycroft plugin utterance phoneme',
-    entry_points={'ovos.plugin.g2p': PLUGIN_ENTRY_POINT}
+    entry_points={'ovos.plugin.g2p': PLUGIN_ENTRY_POINT,
+                  'ovos.plugin.g2p.config': CONFIG_ENTRY_POINT}
 )
